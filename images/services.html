@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - CROSS EFFECT GROUP LTD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../images/favicon_io/favicon-16x16.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .nav-bar {
+            background-color:white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            height: 60px;
+        }
+        .nav-bar .logo {
+            display: flex;
+            align-items: center;
+            color: #fff;
+        }
+        .nav-bar .logo img {
+            width: 100px; /* Adjust the width as needed */
+            height: 50px; /* Adjust the height as needed */
+            margin-right: 10px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 8px 20px;
+            text-decoration: none;
+            border-radius: 20px;
+        }
+        .nav-links a:hover {
+            background-color: #ABB2B9;
+            color: rgb(0, 0, 0);
+        }
+        .cart-icon img {
+            width: 24px;
+            height: 24px;
+        }
+        .hero {
+            position: relative;
+            /* background-image: url('../images/back2.png'); */
+            background-color: #A1C6EC;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+            overflow: hidden; /* Ensure child elements do not overflow */
+        }
+        .hero h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        .hero .button-group {
+            margin-top: 20px;
+        }
+        .hero button {
+            padding: 10px 20px;
+            font-size: 1em;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #444;
+            color: #fff;
+            border: none;
+        }
+        .hero button:hover {
+            background-color: #555;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+          
+        }
+        
+        .services-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px 0;
+        }
+        .service-category {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .service-category h2 {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .service-category ul {
+            list-style: none;
+            padding: 0;
+        }
+        .service-category li {
+            margin: 10px 0;
+            text-align: left;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .service-category li:hover {
+            background-color: #f0f0f0;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: auto;
+        }
+        .footer-column {
+            flex: 1;
+            margin: 10px;
+        }
+        .footer h3 {
+            border-bottom: 1px solid #777;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .map-column {
+            flex: 1 1 600px;
+            max-width: 600px;
+        }
+        .footer a i {
+            margin-right: 8px;
+        }
+
+        /* Additional styles for the service description */
+        .service-description {
+            display: none;
+            margin-top: 10px;
+            color: black;
+        }
+        .service-description img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .services-container p {
+            font-size: 1.1em; /* Adjust paragraph font size */
+            margin-bottom: 20px; /* Add some bottom margin between paragraphs */
+        }
+        .cart-icon img {
+            width: 150px; /* Adjust the width as needed */
+            height: 160px; 
+}
+
+.footer-column a i {
+    font-size: 24px; /* Adjust the font size as needed */
+}
+  .marketing{
+    text-align: center;
+    background-color:white;
+  }
+  .marketing-h2{
+    color: burlywood;
+    
+  }
+  <!--Testmonies css-->
+  .categories, .testimonials {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .category, .testimonial {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        .category img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .testimonial {
+            position: relative;
+            animation: fadeInRight 5s infinite;
+        }
+        .testimonial:nth-child(2) {
+            animation-delay: 1s;
+        }
+        .testimonial:nth-child(3) {
+            animation-delay: 2s;
+        }
+        .testimonial:nth-child(4) {
+            animation-delay: 3s;
+        }
+        .testimonial:nth-child(5) {
+            animation-delay: 4s;
+        }
+        @keyframes fadeInRight {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .testimonial img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            display: block;
+        }
+        .testimonial .testimonial-content {
+            text-align: left;
+            opacity: 0;
+        }
+        .testimonial p {
+            font-style: italic;
+        }
+        .whatsapp-link {
+            display: flex;
+            align-items: center;
+            color: #25D366;
+            text-decoration: none;
+            font-size: 18px;
+            
+
+        }
+
+        .whatsapp-link i {
+            margin-right: 8px;
+            font-size: 24px;
+        }
+
+        .whatsapp-link:hover {
+            color: #128C7E;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="logo">
+            <img src="../images/WhatsApp Image 2024-06-15 at 20.17.53.jpeg" alt="Logo">
+            <span>CROSS EFFECT GROUP LTD</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            
+            <a href="services.html">Services</a>
+            <a href="Products.html">Products</a>
+            <a href="https://api.whatsapp.com/send?phone=1234567890&text=Hello%2C%20I%20would%20like%20to%20chat" target="_blank" class="whatsapp-link">
+                <i class="fab fa-whatsapp"></i> Chat
+            </a>
+        </div>
+        
+    </div>
+    <div class="hero">
+        <h1>WELCOME TO CROSS EFFECT GROUP LTD </h1>
+        <p style="font-size: 30px;">Explore our latest products and enjoy great deals.</p>
+        <div class="button-group">
+            <button onclick="scrollToCategories()">Explore More</button>
+           
+        </div>
+    </div>
+    
+    <div class="container">
+       
+            <input type="text" id="searchInput" placeholder="Search services...">
+       
+       
+        <div class="services-section">
+           
+            <div class="service-category">
+                <h2 class="Main">Main Service</h2>
+                <ul id="main-service-list">
+                    <li>
+                        <a href="#" class="service-link">
+                            Printing & Designing
+                            <div class="service-description">
+                                <p>Our printing and designing service offers high-quality printing and creative design solutions for various needs.</p>
+                                <img src="../images/printer.jpg" alt="Printing & Designing">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="service-link">
+                            Photo Shooting and Video Edit
+                            <div class="service-description">
+                                <p> Our photo shooting and video editing service provides professional photography and video editing services for various occasions and events.</p>
+                                <img src="../images/shooting.jpg" alt="Photo Shooting and Video Edit">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="service-link">
+                            Wedding Ceremony
+                            <div class="service-description">
+                                <p> Our wedding ceremony service provides comprehensive planning and coordination for weddings, ensuring a memorable event.</p>
+                                <img src="../images/weeding.jpg" alt="Wedding Ceremony">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="service-link">
+                            Anniversary Ceremony
+                            <div class="service-description">
+                                <p>Our anniversary ceremony service helps you celebrate milestones with style and elegance, creating unforgettable memories.</p>
+                                <img src="../images/annivesary.jpg" alt="Anniversary Ceremony">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="service-link">
+                            Graduations
+                            <div class="service-description">
+                                <p>Our graduation service provides planning and coordination for graduation ceremonies, ensuring a smooth and memorable event.</p>
+                                <img src="../images/graduation.jpg" alt="Graduations">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="service-link">
+                            Invitations Card
+                            <div class="service-description">
+                                <p> Our invitation card service offers custom-designed invitations for various events and occasions, creating a unique and personalized touch.</p>
+                                <img src="../images/invitation_card.jpg" alt="Invitations Card">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="service-link">
+                            Business Card
+                            <div class="service-description">
+                                <p> Our business card service provides professionally designed business cards tailored to your brand, leaving a lasting impression on clients and contacts.</p>
+                                <img src="../images/Bussiness_card.jpg" alt="Business Card">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="service-link">
+                            Computer Training
+                            <div class="service-description">
+                                <p> Our computer training service offers courses and workshops to enhance computer skills, empowering individuals for personal and professional development.</p>
+                                <img src="../images/Training.jpg" alt="Computer Training">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="service-link">
+                            Computer Maintenance
+                            <div class="service-description">
+                                <p> Our computer maintenance service provides troubleshooting, repairs, and maintenance for computers and IT systems, ensuring optimal performance and reliability.</p>
+                                <img src="../images/maintenance.jpg" alt="Computer Maintenance">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="service-category">
+                <h2 class="Irembo">Irembo Service</h2>
+                <ul id="irembo-service-list">
+                    <li>
+                        <a href="#" class="service-link">
+                            Birth Certificate
+                            <div class="service-description">
+                                <p>Our Birth Certificate Service helps you obtain official birth certificates from government authorities, ensuring a smooth and hassle-free process.</p>
+                                <img src="../images/Birth_certificate.jpg" alt="Birth Certificate">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="service-link">
+                            Certificate of Celibacy
+                            <div class="service-description">
+                                <p>Our Certificate of Celibacy Service assists in obtaining official certificates of celibacy required for marriage or other legal purposes.</p>
+                                <img src="../images/Celibacy_certificate.jpg" alt="Certificate of Celibacy">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="service-link">
+                            Marriage Certificate
+                            <div class="service-description">
+                                <p>Our Marriage Certificate Service helps you acquire official marriage certificates, ensuring a smooth and efficient process for legal documentation.</p>
+                                <img src="../images/marriage_certificate.jpg" alt="Marriage Certificate">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="service-link">
+                            Agri. Livestock Services
+                            <div class="service-description">
+                                <p>Our Agri. Livestock Services provide support and resources for farmers and livestock owners, promoting sustainable agricultural practices and animal husbandry.</p>
+                                <img src="../images/agri_livestock.jpg" alt="Agri. Livestock Services">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="service-link">
+                            Land Services
+                            <div class="service-description">
+                                <p>Our Land Services offer assistance with land registration, documentation, and related services, ensuring compliance with legal requirements and smooth transactions.</p>
+                                <img src="../images/land.jpg" alt="Land Services">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="service-link">
+                            Trading License
+                            <div class="service-description">
+                                <p>Our Trading License Service helps businesses obtain the necessary licenses and permits to operate legally, ensuring compliance with local regulations and smooth business operations.</p>
+                                <img src="../images/trading_license.jpg" alt="Trading License">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="service-link">
+                            Criminal Record Certificate
+                            <div class="service-description">
+                                <p>Our Criminal Record Certificate Service assists in obtaining official certificates of criminal records for legal, employment, or personal purposes.</p>
+                                <img src="../images/criminal_record.jpg" alt="Criminal Record Certificate">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="service-link">
+                            E-passport Services
+                            <div class="service-description">
+                                <p>Our E-passport Services provide assistance with the application and renewal process for electronic passports, ensuring a smooth and efficient experience.</p>
+                                <img src="../images/epassport.jpg" alt="E-passport Services">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="service-category">
+                <h2 class="Irembo">RDB services</h2>
+                <ul id="irembo-service-list">
+                    <li>
+                        <a href="#" class="service-link">
+                            Investment Registration
+                            <div class="service-description">
+                                <p>Maximize your investment potential with our expert registration services for seamless compliance and rapid Goverment approva</p>
+                                <img src="#" alt="Investment Registration">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="service-link">
+                            Environmental Impact Assessment (EIA) Certification
+                            <div class="service-description">
+                               <img src="#" alt="EIA Certification">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="service-link">
+                            Consumer Protection, Inspection and Registration Licensing
+                            <div class="service-description">
+                             <img src="#" alt="Consumer Protection">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="service-link">
+                            AfCFTA Information
+                            <div class="service-description">
+                                <img src="#" alt="AfCFTA Information">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="service-link">
+                            Forestry Permits
+                            <div class="service-description">
+                               <img src="#" alt="Forestry Permits">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="service-link">
+                              Mining Licensing
+                            <div class="service-description">
+                                <img src="#" alt="Mining Licensing">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="service-link">
+                            Licensing Management System
+                            <div class="service-description">
+                              <img src="#" alt="Licensing Management System">
+                            </div>
+                        </a>
+                    </li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+   <div class="marketing">
+     <h1 class="marketing-h2">Our uniqueness</h1>
+      <p>
+        We Offer the quality Products and  service at lower cost<br>
+        we encourage you to every one try and reach out to us and <br>
+        See Our Smart Priducts and 
+
+      </p>
+   </div>
+   <!--Testmonies-->
+   
+   <h2 class="marketing-h2" style="text-align: center;">What Our Customers Say</h2>
+   <div class="testimonials" id="categories">
+       <div class="testimonial">
+           <img src="../images/peaple1.jpg" alt="Customer 1">
+           <p>"Come And See The Beuty", Olivier</p>
+       </div>
+       <div class="testimonial">
+           <img src="../images/peaple2.jpg" alt="Customer 2">
+           <p>"Amazing Products", Anitha</p>
+       </div>
+       <div class="testimonial">
+           <img src="../images/peaple3.jpg" alt="Customer 3">
+           <p>"They provide quality Products",Luth</p>
+       </div>
+       <div class="testimonial">
+           <img src="../images/peaple4.jpg" alt="Customer 4">
+           <p>"Fantastic", Giselle</p>
+       </div>
+       <div class="testimonial">
+           <img src="../images/peaple5.jpg" alt="Customer 5">
+           <p>"Once you purchase their products,There is No regret", Simith</p>
+       </div>
+       <!-- Add more testimonials as needed -->
+   </div>
+    <div class="footer">
+        <div class="footer-column">
+            <h3>CROSS EFFECT LTD</h3>
+            <a href="about_us.html">About Us</a>
+        </div>
+       
+      
+        <div class="footer-column">
+            <h3>More Info</h3>
+            <a href="https://www.facebook.com/CrossEffect" target="_blank"><i class="fab fa-facebook"></i> Cross EFFECT</a>
+            <a href="mailto:cross.effect.ent1@gmail.com"><i class="fas fa-envelope"></i>cross.effect.ent1@gmail.com</a>
+            <a href="https://www.instagram.com/CrossEffect" target="_blank"><i class="fab fa-instagram"></i>  Cross EFFECT</a>
+            <a href="tel:+1234567890"><i class="fas fa-phone-alt"></i> +250794424818</a>
+        </div>
+        <div class="map-column">
+            <h3>Our Location</h3>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.587600258834!2d30.086985075320875!3d-1.9160367980665443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca148023c815b%3A0x368ca0bc7fca2351!2sKinyinya%20Sector%20Office!5e0!3m2!1sen!2srw!4v1717928648388!5m2!1sen!2srw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const serviceLinks = document.querySelectorAll('.service-link');
+        serviceLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const description = this.querySelector('.service-description');
+                if (description.style.display === 'block') {
+                    description.style.display = 'none';
+                } else {
+                    document.querySelectorAll('.service-description').forEach(desc => {
+                        desc.style.display = 'none';
+                    });
+                    description.style.display = 'block';
+                }
+            });
+        });
+
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', function() {
+            const filter = searchInput.value.toLowerCase();
+            serviceLinks.forEach(link => {
+                const text = link.textContent || link.innerText;
+                if (text.toLowerCase().indexOf(filter) > -1) {
+                    link.style.display = '';
+                } else {
+                    link.style.display = 'none';
+                }
+            });
+        });
+        function scrollToCategories() {
+        document.getElementById('categories').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    </script>
+
+
+    
+</body>
+</html>
